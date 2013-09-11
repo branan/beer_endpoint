@@ -28,7 +28,8 @@ get '/' do
 end
 
 get '/api/v1/beer' do
-   whats_on_tap(session).to_json
+  content_type :json
+  whats_on_tap(session).to_json
 end
 
 def whats_on_tap(session)
